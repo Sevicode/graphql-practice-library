@@ -2,12 +2,11 @@ import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
-  useQuery,
-  gql,
 } from "@apollo/client";
-import BookList from "./componnets/BookList";
+import BookList from "./components/BookList";
 const client = new ApolloClient({
   uri: "http://localhost:5000/graphql",
+  cache: new InMemoryCache()
 });
 
 function App() {
