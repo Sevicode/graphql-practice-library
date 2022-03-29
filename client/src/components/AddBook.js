@@ -35,7 +35,9 @@ const displayAuthors = () => {
   const submitForm=(e)=>{
     e.preventDefault()
     console.log(newBook)
-    addBookMut()
+    addBookMut({
+      variables: newBook 
+    })
   }
 
   return (
