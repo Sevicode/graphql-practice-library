@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { useQuery } from "@apollo/client";
+import { useQuery, useMutation } from "@apollo/client";
 import { getAuthorsQuery, addBookMutation } from "../queries/queries";
 
 function AddBook() {
   const { loading, error, data } = useQuery(getAuthorsQuery);
+  const [addBookMut] = useMutation(addBookMutation);
   const [newBook, setNewBook] = useState({
     name: "",
     genre: "",
@@ -14,8 +15,7 @@ function AddBook() {
     setNewBook({ ...newBook, [e.target.name]: e.target.value });
   };
 
-
-  const displayAuthors = () => {
+const displayAuthors = () => {
     if (loading) {
       return <p>Loading...</p>;
     }
@@ -35,6 +35,7 @@ function AddBook() {
   const submitForm=(e)=>{
     e.preventDefault()
     console.log(newBook)
+    addBookMut()
   }
 
   return (
