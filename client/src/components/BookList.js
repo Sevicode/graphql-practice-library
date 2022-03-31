@@ -1,6 +1,7 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
 import {getBooksQuery} from "../queries/queries"
+import BookDetails from "./BookDetails";
 
 
 
@@ -22,6 +23,7 @@ function BookList() {
   return (
     <>
       <ul>{displayBooks()}</ul>
+      <BookDetails />
       
     </>
   );
