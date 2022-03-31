@@ -6,7 +6,7 @@ import {getBooksQuery} from "../queries/queries"
 
 function BookList() {
   const { loading, error, data } = useQuery(getBooksQuery);
-  const displayBook = () => {
+  const displayBooks = () => {
     if (loading) {
       return <p>Loading...</p>;
     }
@@ -21,7 +21,7 @@ function BookList() {
 
   return (
     <>
-      <ul>{displayBook()}</ul>
+      <ul>{displayBooks()}</ul>
       
     </>
   );

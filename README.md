@@ -1,6 +1,13 @@
 # GraphQL practice project, building a Reading list
 Learning Graphql following [The Net Ninja](https://www.youtube.com/playlist?list=PL4cUxeGkcC9iK6Qhn-QLcXCXPQUov1U7f)'s tutorial.
 
+Stack: 
+- React hooks
+- JavaScript
+- GraphQL
+- Apollo
+- MongoDB
+
 ## Installation
 * Download or clone the repository.
 * Open the terminal and navigate to the directory.
